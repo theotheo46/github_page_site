@@ -49,25 +49,44 @@ The site is automatically deployed to GitHub Pages on every push to `main` via
 
 ### Useful `gh` CLI Commands
 
+Check the latest deployment status:
+
 ```bash
-# Check the latest deployment status
 gh run list --limit 3
+```
 
-# Watch a running deployment in real time
+Watch a running deployment in real time:
+
+```bash
 gh run watch
+```
 
-# View logs from a failed run
+View logs from a failed run:
+
+```bash
 gh run view <run-id> --log-failed
+```
 
-# Re-run a failed deployment
+Re-run a failed deployment:
+
+```bash
 gh run rerun <run-id>
+```
 
-# Manually trigger a deployment
+Manually trigger a deployment:
+
+```bash
 gh workflow run deploy.yml
+```
 
-# View the Pages site URL
+View the Pages site URL:
+
+```bash
 gh api repos/theotheo46/github_page_site/pages --jq '.html_url'
+```
 
-# Check Pages build status
+Check Pages build status:
+
+```bash
 gh api repos/theotheo46/github_page_site/pages --jq '.status'
 ```
