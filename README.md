@@ -2,6 +2,9 @@
 
 A client-side calorie calculator where users browse 100 food products, add them to a basket with gram quantities, and see real-time total calories.
 
+**Live site:** [theotheo46.github.io/github_page_site](https://theotheo46.github.io/github_page_site/)
+**Repository:** [github.com/theotheo46/github_page_site](https://github.com/theotheo46/github_page_site)
+
 ## Features
 
 - **Product catalog** with 100 items across 12 categories (fruits, vegetables, meat, fish, dairy, grains, bakery, snacks, beverages, oils, nuts, sweets)
@@ -38,3 +41,33 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 | `npm run typecheck` | Run TypeScript type checking |
 | `npm run format` | Format code with Prettier |
 | `npm run validate` | Run all checks (format + lint + typecheck) |
+
+## Deployment
+
+The site is automatically deployed to GitHub Pages on every push to `main` via
+[GitHub Actions](.github/workflows/deploy.yml).
+
+### Useful `gh` CLI Commands
+
+```bash
+# Check the latest deployment status
+gh run list --limit 3
+
+# Watch a running deployment in real time
+gh run watch
+
+# View logs from a failed run
+gh run view <run-id> --log-failed
+
+# Re-run a failed deployment
+gh run rerun <run-id>
+
+# Manually trigger a deployment
+gh workflow run deploy.yml
+
+# View the Pages site URL
+gh api repos/theotheo46/github_page_site/pages --jq '.html_url'
+
+# Check Pages build status
+gh api repos/theotheo46/github_page_site/pages --jq '.status'
+```
